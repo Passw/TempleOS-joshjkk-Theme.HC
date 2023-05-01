@@ -4,61 +4,56 @@ A dark theme switcher for TempleOS.
 
 ## Showcase
 
-> Startup preview
-
-<img src="preview.png" alt="preview">
+<img src="showcase/preview.png" alt="preview">
 
 <br>
 
-> Editing Theme.HC
-
-<img src="code-preview1.png" alt="code-preview1">
-
-<br>
-
-> Editing KMisc.HC.Z
-
-<img src="code-preview2.png" alt="code-preview2">
+<img src="showcase/code-preview2.png" alt="code-preview2">
 
 ## About
 
 This is from a [youtube tutorial](https://www.youtube.com/watch?v=tEFxizFTFng), uploaded here for access cross-platform.
 
-## Usage
+## Installation
 
 Copy the file to ```C:/Home/Theme.HC``` of your TempleOS filesystem. If you don't know how, you can do it using my [TempleOS-Mounter](./https://github.com/joshjkk/TempleOS-Mounter) program.
 
-### Switching themes
+## Switching themes
 
-In TempleOS, you can switch to the dark theme manually with the following commands:
+In order to switch themes for all terminal windows, you need to edit a kernel file to set the colorscheme every time a new terminal is opened.
+
+We can do this by setting the theme inside of ```C:/Kernel/KTask.HC.Z```:
+
+### 1. Open ```C:/Kernel/KTask.HC.Z``` in the editor
 
 ``` c
-#include "::/Theme.HC";
+Ed("::/Kernel/KTask.HC.Z");
 ```
 
-For dark:
+<br>
+
+### 2. Include Theme.HC
+
+<img src="tutorial/include.png" alt="include Theme.HC">
+
+<br>
+
+### 3. Scroll down and find the ```TaskInit``` function
+
+<img src="tutorial/task-init.png" alt="find the TaskInit function">
+
+<br>
+
+### 4. Set the theme inside of ```TaskInit```
 
 ``` c
 ThemeSet("dark");
 ```
 
-For light (default):
+<img src="tutorial/themeset.png" alt="set the theme inside of TaskInit">
 
-``` c
-ThemeSet("light");
-```
+<br>
 
-### Switch on startup
+### 5. Reboot
 
-In order to switch themes on startup, add the theme switching code in the ```C:/Once.HC.Z``` file:
-
-``` c
-//Put the following lines at the end of the file
-
-#include "Theme.HC";
-ThemeSet("dark");
-```
-
-> For an automatic dark theme
-
-**You may see that the theme switches AFTER you are prompted for a tour.** In order to fix this, just *comment out* the code in the ```Tmp()``` function switch statement that asks you for the tour.
+When you reboot TempleOS, you should be greeted with a beautiful dark theme.
