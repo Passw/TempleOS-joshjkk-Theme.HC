@@ -2,7 +2,23 @@
 
 A dark theme switcher for TempleOS.
 
+## Showcase
+
+> Startup preview
+
 <img src="preview.png" alt="preview">
+
+<br>
+
+> Editing Theme.HC
+
+<img src="code-preview1.png" alt="code-preview1">
+
+<br>
+
+> Editing KMisc.HC.Z
+
+<img src="code-preview2.png" alt="code-preview2">
 
 ## About
 
