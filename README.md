@@ -10,6 +10,10 @@ A dark theme switcher for TempleOS.
 
 <img src="showcase/code-preview2.png" alt="code-preview2">
 
+## ! BUG NOTICE !
+
+KILLING A WINDOW RESETS THE COLORSCHEME. IF YOU HAVE ANY WAY TO FIX THIS PLEASE CONTRIBUTE. PLEASE BARE WITH ME WHILE I TRY TO FIX THIS. THANK YOU.
+
 ## About
 
 This is from a [youtube tutorial](https://www.youtube.com/watch?v=tEFxizFTFng), uploaded here for access cross-platform.
